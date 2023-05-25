@@ -1,4 +1,6 @@
 ls -l
 pwd
 hostname
-hostname-i
+hostname -i
+echo "script ended"
+date
