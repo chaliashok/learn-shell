@@ -1,3 +1,4 @@
+set -x
 echo STATED
 
 stat_check() {
