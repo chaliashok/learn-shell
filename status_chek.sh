@@ -10,4 +10,8 @@ stat_check() {
 }
 
 stat_check $?
+
+cd /home/centos/learn-shell
+ls -lrt maneesha.txt
+echo $?
 echo ENDED
