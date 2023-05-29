@@ -2,7 +2,7 @@ set -x
 echo STATED
 
 stat_check() {
-  if [ "$1" -eq 0 ]; then
+  if [ "$1" -eq 1 ]; then
     echo SUCCESS
   else
     echo FAILURE
@@ -17,6 +17,7 @@ ls -lrt maneesha.txt
     echo SUCCESS
   else
     echo FAILURE
+
   fi
 
 echo ENDED
