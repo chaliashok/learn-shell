@@ -11,7 +11,12 @@ stat_check() {
 
 stat_check $?
 
-cd /home/centos/learn-shell
+cd "/home/centos/learn-shell"
 ls -lrt maneesha.txt
-echo $?
+ if [ "$?" -eq 0 ]; then
+    echo SUCCESS
+  else
+    echo FAILURE
+  fi
+}
 echo ENDED
