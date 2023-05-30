@@ -1,7 +1,7 @@
 cd /tmp
 url="https://releases.wikimedia.org/mediawiki/1.39/mediawiki-1.39.3.tar.gz"
 curl -O $url
-folder=$(echo $url | awk -F / '{print $6}'|sed -i "s/.tar.gz//")
+folder=$(echo $url | awk -F / '{print $6}'|sed -i 's/.tar.gz//')
 yum install httpd -y
 rm -rf /var/www/html/*
 cd /var/www/html
