@@ -1,5 +1,5 @@
-export log_name="/tmp/robo_shop.log"
-export app_dir="/app"
+log_name="/tmp/robo_shop.log"
+app_dir="/app"
 
 status_check()
 {
@@ -24,7 +24,7 @@ services_restart()
  {
 echo "copying Service file"
 cp /home/centos/learn-shell/mediawiki/Development/$component.service /etc/systemd/system/$component.service &>> ${log_name}
- sed -i -e "s/roboshop_password/$roboshop_password/"  /etc/systemd/system/$component.service
+sed -i -e 's/roboshop_password/$roboshop_password/'  /etc/systemd/system/$component.service
 status_check $?
 echo "Loading the service"
  systemctl daemon-reload &>> ${log_name}
@@ -59,7 +59,7 @@ user_check
 status_check $?
 Application_setup
 status_check $?
-cd $app_dir
+cd /app
 echo "Downloading dependencies"
 npm install &>> ${log_name}
 status_check $?
