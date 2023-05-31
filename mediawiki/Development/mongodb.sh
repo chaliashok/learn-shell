@@ -12,7 +12,8 @@ echo "Modifying ip number"
 sed -i "s/127.0.0.1/0.0.0.0/" /etc/mongod.conf &>> ${log_name}
 status_check $?
 echo "Mongodb service restart"
-services_restart
+systemctl enable mongod
+systemctl start mongod
 status_check $?
 
 echo "Process completed"
