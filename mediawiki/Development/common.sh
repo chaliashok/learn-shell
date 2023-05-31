@@ -24,7 +24,7 @@ services_restart()
  {
 echo "copying Service file"
 cp /home/centos/learn-shell/mediawiki/Development/$component.service /etc/systemd/system/$component.service &>> ${log_name}
-sed -i -e 's/roboshop_password/$roboshop_password/'  /etc/systemd/system/$component.service
+#sed -i -e 's/roboshop_password/$roboshop_password/'  /etc/systemd/system/$component.service
 status_check $?
 echo "Loading the service"
  systemctl daemon-reload &>> ${log_name}
