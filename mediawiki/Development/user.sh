@@ -7,6 +7,7 @@ cd /app
 unzip /tmp/user.zip
 cd /app
 npm install
+cp /home/centos/learn-shell/mediawiki/Development/user.service /etc/systemd/system/user.service
 systemctl daemon-reload
 systemctl enable user
 systemctl start user
