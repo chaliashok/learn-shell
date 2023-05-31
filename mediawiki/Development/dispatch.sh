@@ -1,5 +1,5 @@
 echo "Dispatch process started"
-souce common.sh
+source common.sh
 component=dispatch
 
 golang

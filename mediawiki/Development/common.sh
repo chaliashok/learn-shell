@@ -121,8 +121,7 @@ status_check $?
 }
 
 golang() {
-
-  echo "golang installtion started"
+ echo "golang installtion started"
   yum install golang -y &>> ${log_name}
   status_check $?
   echo "golang user check"
