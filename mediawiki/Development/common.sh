@@ -100,6 +100,7 @@ maven() {
   mvn clean package  &>> ${log_name}
   mv target/shipping-1.0.jar shipping.jar  &>> ${log_name}
   services_restart
+  mysql_setup
 }
 
 python() {
