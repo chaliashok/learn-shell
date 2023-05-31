@@ -1,16 +1,11 @@
-yum install python36 gcc python3-devel -y
-useradd roboshop
-mkdir /app
-curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment.zip
-cd /app
-unzip /tmp/payment.zip
+echo "Payment service setup started"
 
-cd /app
-pip3.6 install -r requirements.txt
-
-cp /home/centos/learn-shell/mediawiki/Development/payment.service /etc/systemd/system/payment.service
-
-systemctl daemon-reload
-
-systemctl enable payment
-systemctl start payment
+source common.sh
+component=payment
+roboshop_password=$1
+if [ -z "$roboshop_password" ]; then
+  echo roboshop_password is missing
+  exit 1
+fi
+python
+echo "Process completed"
