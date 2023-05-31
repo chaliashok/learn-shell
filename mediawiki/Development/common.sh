@@ -75,7 +75,7 @@ mongodb_setup() {
   yum install mongodb-org-shell -y &>> ${log_name}
   status_check $?
   echo "Loading Schema data"
-  mongo --host mongodb-dev.devopsawschinni.online <$app_dir/schema/$component.js &>> ${log_name}
+  mongo --host mongodb-dev.devopsawschinni.online </$app_dir/schema/$component.js &>> ${log_name}
   status_check $?
 }
 
