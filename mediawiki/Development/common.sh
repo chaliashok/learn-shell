@@ -15,7 +15,10 @@ user_check()
 {
 id roboshop &>> ${log_name}
 if [ $? -eq 1 ]; then
+  useradd roboshop &>> ${log_name}
   echo "success"
+  else
+    echo "user already exists"
 fi
     }
 status_check $?
