@@ -1,5 +1,5 @@
 echo "mysql DB setup started"
-source=common.sh
+source common.sh
 component=mysqld
 mysql_password=$1
 if [ -z "$mysql_password" ]; then
